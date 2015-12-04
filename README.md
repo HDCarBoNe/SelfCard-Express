@@ -37,18 +37,18 @@ Présenter le début de "selfcard express.docx" au professeur afin d'avoir un av
 
 Marc:
 Commence à étudier comment fonctionne le shield, 
-Recherche les librairies utilisable avec le shield (à placer dans le fichier RFID/librairies/), 
-Etudier les moyen d'écriture des cartes, placer les éventuel programme dans (RFID/programme/), 
+Recherche les librairies utilisables avec le shield (à placer dans le fichier RFID/librairies/), 
+Etudié les moyens d'écriture des cartes, placer les éventuel programmes dans (RFID/programme/), 
 Si il y a d'éventuel documents les placés dans (RFID/documents).
 
 Pierre:
 Faire les schémas de l'interface, 
-Discuter des différents schéma avec l'équipe (choisir celui à suivre), 
+Discuter des différents schémas avec l'équipe (choisir celui à suivre), 
 Ajouter les packages au module PCduino.
 
 Dylan:
 Faire un document sur la présentation du PCduino, 
-Lister les différentes information à stocker, 
+Lister les différentes informations à stocker, 
 Parler des informations à stocker avec l'équipe, 
 Ajouter les packages au module PCduino.
 -------------------------------------------------------------------------
