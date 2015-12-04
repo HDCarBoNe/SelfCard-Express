@@ -47,6 +47,7 @@ Dylan:
 Groupe:
 
 Présenter le début de "selfcard express.docx" au professeur afin d'avoir un avis.
+
 -------------------------------------------------------------------------
 
 #10/12/2015
@@ -78,4 +79,5 @@ Lister les différentes informations à stocker,
 Parler des informations à stocker avec l'équipe, 
 
 Ajouter les packages au module PCduino.
+
 -------------------------------------------------------------------------
