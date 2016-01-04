@@ -61,7 +61,7 @@ void loop(void) {
   if ((uid[0] == 195) && (uid[1] == 21) && (uid[2]== 35) && (uid[3] == 208)){ //Tag accepte
     Serial.println("Card accepted");
     Serial.println("Password :");//Demande de mot de passe
-    delay(4000); //Attente pour entrer le mot de passe
+    delay(5000); //Attente pour entrer le mot de passe
     for(int i=0;i<5;i++){ //Decoupage en caractere du mot de passe rentre
       codeRent[i]= Serial.read();
     }
@@ -74,5 +74,5 @@ void loop(void) {
     else {
       Serial.println("Card refused");
     }
-    
+    delay(4000)
 }
