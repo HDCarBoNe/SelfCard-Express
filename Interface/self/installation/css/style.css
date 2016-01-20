@@ -1,0 +1,34 @@
+body
+{
+	background-color: #EDF3F5;
+	font-family: "Courier New";
+}
+
+h1
+{
+	color: #EDF3F5;
+	text-align: center;
+	background-color: #3F61E8;
+}
+
+h2
+{
+    color: gray;
+    text-align: center;
+}
+
+.add_bdd
+{
+	text-align: center;
+	margin-top: 4px; /* Espace les blocs du formulaire entre eux */
+}
+
+.img_technicien
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+.valide-bdd{
+	color: green;
+}

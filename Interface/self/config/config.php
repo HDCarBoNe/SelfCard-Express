@@ -1,0 +1,1 @@
+<?php $hote = localhost; $utilisateur = root; $nomBase = Self; $mdp = raspberry; ?>
