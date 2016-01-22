@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-      <meta charset="UTF-8">
-      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" type="text/css" href="css/bdd.css">
       <title>Installation</title>
 </head>
 <body>
@@ -18,17 +18,8 @@
              "mysql:host=" . PDO_HOST . ";". 
              "dbname=" . PDO_DBBASE, PDO_USER, PDO_PW, 
              array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") );
-              $installation == 1;
-            } 
-        
-            catch (PDOException $e){     //Si la connexion a la bdd échoue
-             echo 'Pas possible d atteindre la bdd ';
-             print " <p>Erreur !: " . $e->getMessage() . "</p>";; 
-            die(); 
-                     }
-            if ($installation == 1) {
-                 // echo '<h1>Installation de la bdd en cour... <h1>';
-                  $bdd->exec("CREATE TABLE IF NOT EXISTS `eleves` (
+                echo '<h2>Installation de la bdd en cours... </h2>';
+                  $bdd->exec("CREATE TABLE IF NOT EXISTS eleves (
                              `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
                              `nom` VARCHAR(20) NOT NULL,
                              `prenom` VARCHAR(20) NOT NULL,
@@ -40,14 +31,14 @@
                              `Ville` VARCHAR(20) NOT NULL,
                              `code_postal` SMALLINT(5) UNSIGNED NOT NULL,
                              `info_supp` TEXT,
-                             PRIMARY KEY (ID)
-                             )ENGINE=INNODB");
+                             PRIMARY KEY (id),
+                             UNIQUE INDEX ind_uni_nom_pren_id (nom, prenom, id)
+                             )ENGINE=INNODB;");
 
-                 // class valide_bdd{
-                 //       echo '<p>La base de donnée élèves a été créer.</p>';
-                 // }
-                  $bdd->exec("CREATE TABLE IF NOT EXISTS `Prof'(
-                              id SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
+                      echo '<p>La base de donn&eacutee &eacutel&egraveves &agrave &eacutet&eacute cr&eacuteer.</p>';
+
+                  $bdd->exec("CREATE TABLE IF NOT EXISTS prof(
+                              `id` SMALLINT UNSIGNED NOT NULL AUTO_INCREMENT,
                               `nom` VARCHAR(20) NOT NULL,
                               `prenom` VARCHAR(20) NOT NULL,
                               `credit` SMALLINT(5),
@@ -56,26 +47,28 @@
                               `date_naissance` DATE NOT NULL,
                               `ville` VARCHAR(20) NOT NULL,
                               `code_postal` SMALLINT(5) NOT NULL,
-                              `info_supp' TEXT,
-                              PRIMARY KEY (ID)
+                              `info_supp` TEXT,
+                              PRIMARY KEY (id),
+                              UNIQUE INDEX ind_uni_nom_pren_id (nom, prenom, id)
                               )ENGINE=INNODB;");
 
-                 // class valide_bdd{
-                 //       echo '<p>La base de donnée Professeurs a été créer.</p>';
-                 // }
+                        echo '<p>La base de donn&eacutee professeurs &agrave &eacutet&eacute cr&eacuteer.</p>';
 
-                  $bdd->exec("CREATE TABLE IF NOT EXISTS `Admin` (,
+                  $bdd->exec("CREATE TABLE IF NOT EXISTS admin(
                               `nbr_rps_prevu` SMALLINT NOT NULL,
-                              `nbr_rps_servi` SMALLINT NOT NULL,
+                              `nbr_rps_servi` SMALLINT NOT NULL
                               )ENGINE=INNODB;");
                   
-                 // class valide_bdd{
-                 //       echo '<p>La base de donnée Administration a été créer.</p>';
-                 //}
-
-
-            }
-
+                        echo '<p>La base de donn&eacutee administration &agrave &eacutet&eacute cr&eacuteer.</p>';
+                      }
+        
+            catch (PDOException $e){     //Si la connexion a la bdd échoue
+             echo 'Pas possible d atteindre la bdd ';
+             print " <p>Erreur !: " . $e->getMessage() . "</p>";; 
+            die(); 
+                     }
+            echo '<h3> Installation termin&eacutee !</h3>';         
+            echo '<h3>Pensez &agrave supprimer le dossier "installation" !</h3>';
       ?>    
 </body>
 </html>
