@@ -1,6 +1,6 @@
 body
 {
-	background-color: #EDF3F5;
+	/*background-color: #EDF3F5;*/
 	font-family: "Courier New";
 }
 
@@ -31,4 +31,9 @@ h2
 }
 .valide-bdd{
 	color: green;
+}
+h3
+{
+    color: red;
+    text-align: center;
 }

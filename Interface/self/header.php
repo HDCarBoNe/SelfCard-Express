@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/self.css">
 	<title>SelfCard Express</title>
 	<script type="text/javascript">
 		function date_heure(id)
@@ -37,18 +37,22 @@
         </script>
 </head>
 <body>
+
 	<header>
-		<img src="stjo.jpg" class="logo">
-
-		<div class="dh">
-		<p><span id="date_heure"></span></p>
-        <script type="text/javascript">window.onload = date_heure('date_heure');</script>
+	<?php include("self.css"); ?>
+	<div id="header">
+		<div class="element">
+			<img src="Image/stjo.jpg">
+		</div class="element">	
+		<div>
+			<p> SelfCard Express: </p>
 		</div>
-
-
-		<div class="titre">
-		<p> SelfCard Express: </p>	
+		<div class="element">
+			<p><span id="date_heure"></span></p>
+			<script type="text/javascript">window.onload = date_heure('date_heure');</script>
 		</div>
-	</header>	
+	</div>
+	</header>
+
 </body>
 </html>

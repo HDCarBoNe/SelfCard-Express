@@ -8,7 +8,7 @@
 <body>
 	<h1>Bienvenue sur la page d'installation de l'interface pour le système de carte sans contact</h1>
 	<img src="img/install.png" class="img_technicien"/>
-		<h2>Base de données MySQL: Identifants de connection</h2>
+		<h2>Base de données MySQL: Identifiants de connection</h2>
 	    <!-- formulaire pour collecter les informations pour la connexion à la base de données --> 
 	      <form method="post" action="">
 	    	<div class="add_bdd">
@@ -53,7 +53,7 @@
 				 "mysql:host=" . PDO_HOST . ";". 
 				 "dbname=" . PDO_DBBASE, PDO_USER, PDO_PW, 
 				 array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8") ); 
-				 echo '<a href="bdd.php">Suivant</a>';
+				 include('bdd.php');
 				 } 
 				
 				 catch (PDOException $e){     //Si la connexion a la bdd échoue

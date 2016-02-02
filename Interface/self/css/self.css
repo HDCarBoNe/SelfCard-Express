@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: space-around;
+    border-top: solid;
+    border-left: solid;
+    border-right: solid;
+    text-align: center;
+}
+nav, section {
+	border-style: solid;
+}
+nav {
+	width: 15%;
+	text-align: center;
+}
+section {
+	width:85%;
+}
+#body {
+	display: flex;
+    justify-content: space-around;
+
+}
+.elem {
+	border-style: dotted;
+}
